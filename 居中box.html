@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* 通过绝对定位margin:auto */
+		/* .container{
+			position: relative;
+			background-color: red;
+			width: 500px;
+			height: 500px;
+		}
+		.box{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			background-color: green;
+		} */
+		/* 通过绝对定位和移动 */
+		/* .container{
+			position: relative;
+			background-color: red;
+			width: 500px;
+			height: 500px;
+		}
+		.box{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: green;
+		} */
+		/* 通过flex */
+		.container{
+			display: flex;
+			background-color: red;
+			width: 500px;
+			height: 500px;
+			justify-content: center;
+			align-items: center;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+
+		</div>
+	</div>
+</body>
+</html>

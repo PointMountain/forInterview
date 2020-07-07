@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.d1{
+			width: 500px;
+			height: 500px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="d1">
+		<div class="d2">
+			<div class="d3">
+				<div class="d4">
+						<button onclick="btn()">按我</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	document.querySelector('.d1').addEventListener('click', ()=>{
+		console.log('d1 maopao')
+	})
+	document.querySelector('.d1').addEventListener('click', ()=>{
+		console.log('d1')
+	},true)
+	document.querySelector('.d2').addEventListener('click', ()=>{
+		console.log('d2')
+	})
+	document.querySelector('.d3').addEventListener('click', ()=>{
+		console.log('d3')
+	})
+	document.querySelector('.d4').addEventListener('click', (e)=>{
+		// e.stopPropagation()
+		e.stopImmediatePropagation()
+		console.log('d4')
+	})
+	function btn(){
+		console.log('btn')
+	}
+</script>
+</html>

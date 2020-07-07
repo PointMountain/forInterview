@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Document</title>
+	<style>
+		.content{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		.v-enter{
+			background: blue;
+		}
+		.v-enter-active{
+			background: purple;
+			transition: all 10s linear;
+		}
+		.v-enter-to{
+			background: chartreuse;
+		}
+		.v-leave{
+			background: rgb(98, 0, 255);
+		}
+		.v-leave-active{
+			background: crimson;
+			transition: all 10s linear;
+		}
+		.v-leave-to{
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id='app'>
+		<button @click="change">点我</button>
+		<transition>
+			<div v-if='isShow' class='content'>
+				content
+			</div>
+		</transition>
+	</div>
+	<script>
+		new Vue({
+			el: '#app',
+			data:{
+				isShow: false
+			},
+			watch:{
+				isShow(val){
+					console.log('val:',val)
+				}
+			},
+			beforeCreate(){
+				console.log(this)
+			},
+			methods:{
+				change(){
+					this.isShow = !this.isShow
+				}
+			}
+		})
+	</script>
+</body>
+
+
+</html>
