@@ -47,7 +47,8 @@
 		new Vue({
 			el: '#app',
 			data:{
-				isShow: false
+				isShow: false,
+				a: 1
 			},
 			watch:{
 				isShow(val){
@@ -60,6 +61,8 @@
 			methods:{
 				change(){
 					this.isShow = !this.isShow
+					this.a = 2
+					console.log(this.a)
 				}
 			}
 		})
